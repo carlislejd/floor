@@ -23,6 +23,7 @@ table.dataframe {
 	margin-top: 2.5%;
 	margin-left: auto;
   	margin-right: auto;
+	border-radius:6px;
 	height: 80%;
 	overflow-y: scroll;
 	display: block;
@@ -34,13 +35,13 @@ table.dataframe {
   }
   .dataframe th {
 	text-align:center;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.4);
 	position: sticky;
 	top: 0;
 	backdrop-filter: blur(15px);
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.1em; 
-	color: rgb(255, 255, 255, 0.6);
+	color: rgb(255, 255, 255, 0.7);
 	border: 1px solid #C8C8C8;
 	height: 45px;
 	width: 12.5%;
@@ -52,7 +53,7 @@ table.dataframe {
 	text-align:center;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.0em; 
-	color: rgb(255, 255, 255, 0.6);
+	color: rgb(255, 255, 255, 0.7);
 	border: 1px solid #C8C8C8;
 	height: 45px;
 	width: 12.5%;
