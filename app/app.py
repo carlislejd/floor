@@ -12,8 +12,8 @@ def welcome():
     """ 
     Our about us page.
     """
-    
-    return render_template('base.html')
+    spread = pd.read_csv('spread.csv')
+    return render_template('base.html', tables=[spread.to_html(classes='data', header="true", index=False)])
 
 
 if __name__ == '__main__':
