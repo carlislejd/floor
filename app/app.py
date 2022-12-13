@@ -13,3 +13,4 @@ def welcome():
     spread = pd.read_csv('spread.csv')
     return render_template('base.html', tables=[spread.to_html(classes='data', header="true", index=False)])
 
+app.run(debug=True)
