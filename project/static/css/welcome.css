@@ -3,6 +3,7 @@ body {
 	background-size: 400% 400%;
 	animation: gradient 20s ease infinite;
 	height: 100vh;
+	overflow: hidden;
 }
 
 @keyframes gradient {
@@ -39,7 +40,7 @@ table.dataframe {
 	position: sticky;
 	top: 0;
 	backdrop-filter: blur(15px);
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Gill Sans', sans-serif;
 	font-size: 1.05em; 
 	color: rgb(255, 255, 255, 0.7);
 	border: 1px solid #C8C8C8;
@@ -52,7 +53,7 @@ table.dataframe {
   .dataframe td {
 	text-align:center;
 	background-color: rgba(255, 255, 255, 0.08); 
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Gill Sans', sans-serif;
 	font-size: 1.0em; 
 	color: rgb(255, 255, 255, 0.7);
 	border: 1px solid #C8C8C8;
