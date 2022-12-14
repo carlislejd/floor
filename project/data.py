@@ -1,8 +1,3 @@
-import schedule 
-import time 
-
-import pandas as pd
-
 from dotenv import load_dotenv
 
 from config import contract_collection, prices_collection
@@ -53,11 +48,3 @@ def func():
             new_bids.append(project)
         
     return prices_db.insert_many(new_bids)
-
-
-schedule.every(5).minutes.do(func)
-
-while True:
-    schedule.run_pending()
-    print('Waiting...')
-    time.sleep(1)
