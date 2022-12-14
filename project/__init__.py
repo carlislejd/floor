@@ -4,10 +4,10 @@ from flask import Flask, render_template
 from .config import prices_collection
 
 
-prices_db = prices_collection()
-
 def create_app():
     app = Flask(__name__, static_url_path='/static')
+
+    prices_db = prices_collection()
 
 
     @app.route('/', methods=["GET", "POST"]) 
