@@ -5,7 +5,7 @@ import pandas as pd
 
 from dotenv import load_dotenv
 
-from config import contract_collection
+from config import contract_collection, prices_collection
 from helper import contract_list, get_collection_activity, get_collection_info
 
 
@@ -32,6 +32,9 @@ def func():
         contract_collection().insert_many(new_bids)
 
     contract_db = contract_list()
+    prices_db = prices_collection()
+
+    prices_db.delete_many({})
 
     new_bids = []
     for c in contract_db:
@@ -49,10 +52,7 @@ def func():
                 project['Spread'] = 'None'
             new_bids.append(project)
         
-
-    df = pd.DataFrame(new_bids)    
-
-    return df[~df['Spread'].isin(['None'])].sort_values(by='Collection', ascending=True).to_csv('spread.csv', index=False)
+    return prices_db.insert_many(new_bids)
 
 
 schedule.every(5).minutes.do(func)

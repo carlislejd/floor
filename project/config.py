@@ -13,3 +13,10 @@ def contract_collection():
     client = pymongo.MongoClient(getenv('MONGO'))
     db = client.floor
     return db.contractIds
+
+
+def prices_collection():
+    """Returns a collection from the MongoDB database."""
+    client = pymongo.MongoClient(getenv('MONGO'))
+    db = client.floor
+    return db.prices
