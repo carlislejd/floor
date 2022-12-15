@@ -37,7 +37,7 @@ for c in contract_db:
         project['Lowest Floor Price'] = f"{str(collection['floorAsk']['sourceDomain'])} : {round(collection['floorAsk']['price']['amount']['decimal'], 3)} {collection['floorAsk']['price']['currency']['symbol']}"
         try:
             project['Highest Collection Offer'] = f"{str(collection['topBid']['sourceDomain'])} : {round(collection['topBid']['price']['amount']['decimal'], 3)} {collection['topBid']['price']['currency']['symbol']}"
-            project['Spread'] = f"{round((round(float((collection['floorAsk']['price']['amount']['decimal']) - float(collection['topBid']['price']['amount']['decimal'])) / float(collection['floorAsk']['price']['amount']['decimal']), 2)) * 100), 2}%"
+            project['Spread'] = f"{round(((collection['floorAsk']['price']['amount']['decimal'] - collection['topBid']['price']['amount']['decimal']) / collection['floorAsk']['price']['amount']['decimal']) * 100, 2)}%"
         except TypeError:
             project['Highest Collection Offer'] = 'None'
             project['Spread'] = 'None'
