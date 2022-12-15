@@ -17,6 +17,12 @@ body {
 		background-position: 0% 50%;
 	}
 }
+p {
+	font-family: 'Gill Sans', sans-serif;
+	text-align:center;
+	font-size: 1.0em;
+	color: rgb(255, 255, 255, 0.7);
+}
 
 
 table.dataframe {
