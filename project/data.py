@@ -25,8 +25,6 @@ if new_bids:
 contract_db = contract_list()
 prices_db = prices_collection()
 
-prices_db.delete_many({})
-
 new_bids = []
 for c in contract_db:
     collections = get_collection_info(1, True, False, c_id=c)
@@ -43,4 +41,5 @@ for c in contract_db:
             project['Spread'] = 'None'
         new_bids.append(project)
     
+prices_db.delete_many({})
 prices_db.insert_many(new_bids)
